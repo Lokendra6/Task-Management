@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "77eb035f-cd34-4c95-afcb-54704e3f3633",
+		"name": "TManage API",
+		"description": "Sample Postman collection for TManage API\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login(Manager)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTc3Mjc5LCJpYXQiOjE3NDQ5NzY5NzksImp0aSI6IjY0NDdhZDQ1ZjU5ZTQ4M2ZiMjYyODMzOTA3NDJmNzM0IiwidXNlcl9pZCI6Mn0.PlibuxsnJ4N0S7pGLW9KmS_0UYltUsm1ufR7eYNO5XA\"",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"check\",\r\n  \"password\": \"c12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task by manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTc5NDg5LCJpYXQiOjE3NDQ5NzkxODksImp0aSI6ImIzNzE5MDlkYzhkOTQ3YTRhNjk3YWY5MGI3NTdiZGQzIiwidXNlcl9pZCI6Mn0.Pn2sVW5Br9no8ZsRLDSLKjHVL2SZf_VUnd7T11ofU9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Complete Task C\",\r\n    \"description\": \"Complete the assigned task.\",\r\n    \"assigned_to\": 3,\r\n    \"assigned_by\": 2,\r\n    \"deadline\": \"2025-04-30T12:00:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task list for manager",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTc5NDg5LCJpYXQiOjE3NDQ5NzkxODksImp0aSI6ImIzNzE5MDlkYzhkOTQ3YTRhNjk3YWY5MGI3NTdiZGQzIiwidXNlcl9pZCI6Mn0.Pn2sVW5Br9no8ZsRLDSLKjHVL2SZf_VUnd7T11ofU9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login(User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTc5NDg5LCJpYXQiOjE3NDQ5NzkxODksImp0aSI6ImIzNzE5MDlkYzhkOTQ3YTRhNjk3YWY5MGI3NTdiZGQzIiwidXNlcl9pZCI6Mn0.Pn2sVW5Br9no8ZsRLDSLKjHVL2SZf_VUnd7T11ofU9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user\",\r\n  \"password\": \"u12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login(User)",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Task List for User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Task completion status update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTg0NDQzLCJpYXQiOjE3NDQ5ODQxNDMsImp0aSI6ImI2NDY5Yzc1YmZiNDQwYTI4MjQ5YzcwMWVhNjk1ODUyIiwidXNlcl9pZCI6M30.ik-6vTKHW4irVJRpiWBuiRkL1kIr31NW3E1rR13vXy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/tasks/2/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						"2",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0OTg0NDQzLCJpYXQiOjE3NDQ5ODQxNDMsImp0aSI6ImI2NDY5Yzc1YmZiNDQwYTI4MjQ5YzcwMWVhNjk1ODUyIiwidXNlcl9pZCI6M30.ik-6vTKHW4irVJRpiWBuiRkL1kIr31NW3E1rR13vXy0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Task B\",\r\n  \"description\": \"Updated description for the task.\",\r\n  \"deadline\": \"2025-04-30T14:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/my-tasks/2/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"my-tasks",
+						"2",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
